@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Constitution_Suvey_14.body_info">
+
+    <EditText
+        android:id="@+id/sex"
+        android:layout_width="136dp"
+        android:layout_height="51dp"
+        android:hint="성별:"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="136dp"
+        android:layout_height="51dp"
+        android:hint="나이:"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="136dp"
+        android:layout_height="51dp"
+        android:hint="키:"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="136dp"
+        android:layout_height="51dp"
+        android:hint="몸무게:"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/bmi"
+        android:layout_width="136dp"
+        android:layout_height="51dp"
+        android:hint="체지방률"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplication">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication">
+        <activity android:name="Constitution_Suvey_14.Activity_index"></activity>
+        <activity android:name="Constitution_Suvey_14.Start_suvey">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Constitution_Suvey_14.body_info" />
+        <activity android:name="Constitution_Suvey_14.Suvey1" />
+        <activity android:name="Constitution_Suvey_14.Suvey2" />
+        <activity android:name="Constitution_Suvey_14.Suvey3" />
+        <activity android:name="Constitution_Suvey_14.Suvey4" />
+        <activity android:name="Constitution_Suvey_14.Suvey5" />
+        <activity android:name="Constitution_Suvey_14.Suvey6" />
+        <activity android:name="Constitution_Suvey_14.Suvey7" />
+        <activity android:name="Constitution_Suvey_14.Suvey8" />
+        <activity android:name="Constitution_Suvey_14.Suvey9" />
+        <activity android:name="Constitution_Suvey_14.Suvey10" />
+        <activity android:name="Constitution_Suvey_14.Suvey11" />
+        <activity android:name="Constitution_Suvey_14.Suvey12" />
+        <activity android:name="Constitution_Suvey_14.Suvey13" />
+        <activity android:name="Constitution_Suvey_14.Suvey14" />
+        <activity android:name="Constitution_Suvey_14.Activity_index"
+            tools:ignore="DuplicateActivity" />
+        <activity android:name="Constitution_Suvey_14.PAL_index" />
+        <activity android:name="Constitution_Suvey_14.result" />
+    </application>
+
+</manifest>
