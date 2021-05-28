@@ -13,8 +13,6 @@ import com.example.myapplication.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import Constitution_Suveyout.Pal_filter;
 public class PAL_index extends AppCompatActivity {
     TextView suvey;
     Button check_1,check_2,check_3,btn_next,check_4,check_5;
@@ -22,7 +20,8 @@ public class PAL_index extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //PAL 지수용 HASH
-        HashMap<String,Double> Ac_index =new HashMap<>();
+        HashMap<String,ArrayList> Ac_index =new HashMap<>();
+        ArrayList temp=new ArrayList();
         //설문조사
         HashMap<Integer, Boolean> data=(HashMap<Integer,Boolean>)getIntent().getSerializableExtra("output");
         //신체정보(length=5)
@@ -51,7 +50,8 @@ public class PAL_index extends AppCompatActivity {
                     case R.id.check_1:
                         check_1.setBackgroundColor(Color.parseColor("#bbccff"));
                         check_1.setEnabled(false);
-                        Ac_index.put("check",1.0);
+                        temp.add(1.0);temp.add(1.2);
+                        Ac_index.put("check",temp);
                         btn_next.setVisibility(v.VISIBLE);
                         check_2.setEnabled(true);
                         check_3.setEnabled(true);
@@ -61,7 +61,8 @@ public class PAL_index extends AppCompatActivity {
                     case R.id.check_2:
                         check_2.setBackgroundColor(Color.parseColor("#bbccff"));
                         check_2.setEnabled(false);
-                        Ac_index.put("check",2.0);
+                        temp.add(2.0);temp.add(1.375);
+                        Ac_index.put("check",temp);
                         btn_next.setVisibility(v.VISIBLE);
                         check_1.setEnabled(true);
                         check_3.setEnabled(true);
@@ -71,7 +72,8 @@ public class PAL_index extends AppCompatActivity {
                     case R.id.check_3:
                         check_3.setBackgroundColor(Color.parseColor("#bbccff"));
                         check_3.setEnabled(false);
-                        Ac_index.put("check",3.0);
+                        temp.add(3.0);temp.add(1.55);
+                        Ac_index.put("check",temp);
                         btn_next.setVisibility(v.VISIBLE);
                         check_1.setEnabled(true);
                         check_2.setEnabled(true);
@@ -81,7 +83,8 @@ public class PAL_index extends AppCompatActivity {
                     case R.id.check_4:
                         check_4.setBackgroundColor(Color.parseColor("#bbccff"));
                         check_4.setEnabled(false);
-                        Ac_index.put("check",4.0);
+                        temp.add(4.0);temp.add(1.725);
+                        Ac_index.put("check",temp);
                         btn_next.setVisibility(v.VISIBLE);
                         check_1.setEnabled(true);
                         check_2.setEnabled(true);
@@ -91,7 +94,8 @@ public class PAL_index extends AppCompatActivity {
                     case R.id.check_5:
                         check_5.setBackgroundColor(Color.parseColor("#bbccff"));
                         check_5.setEnabled(false);
-                        Ac_index.put("check",5.0);
+                        temp.add(5.0);temp.add(1.9);
+                        Ac_index.put("check",temp);
                         btn_next.setVisibility(v.VISIBLE);
                         check_1.setEnabled(true);
                         check_2.setEnabled(true);
@@ -109,13 +113,11 @@ public class PAL_index extends AppCompatActivity {
         check_3.setOnClickListener(onClickListener);
         check_4.setOnClickListener(onClickListener);
         check_5.setOnClickListener(onClickListener);
-        ArrayList filter= new ArrayList();
-        filter.add(Pal_filter.Pal_index_filter(Ac_index));
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getApplicationContext(), result.class);
-                intent.putExtra("check_pal",filter);
+                intent.putExtra("check_pal",Ac_index);
                 intent.putExtra("output",data);
                 intent.putExtra("body_info",body_info);
                 intent.putExtra("activity_index",activity_index);

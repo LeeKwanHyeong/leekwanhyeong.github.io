@@ -20,7 +20,7 @@ public class result extends AppCompatActivity {
         HashMap<Integer, Boolean> data=(HashMap<Integer,Boolean>)getIntent().getSerializableExtra("output");
         HashMap<String, Double> body_info=(HashMap<String,Double>)getIntent().getSerializableExtra("body_info");
         int activity_index=getIntent().getIntExtra("activity_index",0);
-        ArrayList pal_filter=(ArrayList)getIntent().getSerializableExtra("check_pal");
+        HashMap<String,ArrayList> pal_filter=(HashMap<String, ArrayList>)getIntent().getSerializableExtra("check_pal");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         textView=(TextView) findViewById(R.id.textView);
